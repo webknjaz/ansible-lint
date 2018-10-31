@@ -1,64 +1,22 @@
 sudo: false
 language: python
+python:
+- "2.7"
+- "3.6"
 
-matrix:
-  include:
-    - python: "2.7"
-      env: TOXENV=py27-flake8
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible19
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible20
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible21
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible22
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible23
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible24
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible25
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible26
-
-    - python: "2.7"
-      env: TOXENV=py27-ansible27
-
-    - python: "2.7"
-      env: TOXENV=py27-ansibledevel
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible22
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible23
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible24
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible25
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible26
-
-    - python: "3.6"
-      env: TOXENV=py36-ansible27
-
-    - python: "3.6"
-      env: TOXENV=py36-ansibledevel
-
-    - python: "3.6"
-      env: TOXENV=py36-flake8
+env:
+  matrix:
+  - TOXENV: py27-flake8
+  - TOXENV: py27-ansible19
+  - TOXENV: py27-ansible20
+  - TOXENV: py27-ansible21
+  - TOXENV: py27-ansible22
+  - TOXENV: py27-ansible23
+  - TOXENV: py27-ansible24
+  - TOXENV: py27-ansible25
+  - TOXENV: py27-ansible26
+  - TOXENV: py27-ansible27
+  - TOXENV: py27-ansibledevel
 
 install:
 - pip install tox
