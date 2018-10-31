@@ -1,5 +1,7 @@
 flake8
-nose
+pytest
+pytest-cov
+pytest-sugar
 pep8-naming
 tox
 wheel
