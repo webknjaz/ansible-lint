@@ -44,6 +44,14 @@ matrix:
 
     - language: python
       python: "2.7"
+      env: TOXENV=py27-ansible26
+
+    - language: python
+      python: "2.7"
+      env: TOXENV=py27-ansible27
+
+    - language: python
+      python: "2.7"
       env: TOXENV=py27-ansibledevel
 
     - language: python
@@ -64,6 +72,14 @@ matrix:
 
     - language: python
       python: "3.6"
+      env: TOXENV=py36-ansible26
+
+    - language: python
+      python: "3.6"
+      env: TOXENV=py36-ansible27
+
+    - language: python
+      python: "3.6"
       env: TOXENV=py36-ansibledevel
 
     - language: python
@@ -71,7 +87,7 @@ matrix:
       env: TOXENV=py36-flake8
 
 install:
-  - pip install -r test-deps.txt
+- pip install tox
 
 script:
 - tox -v
